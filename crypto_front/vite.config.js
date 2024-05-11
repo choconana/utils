@@ -16,7 +16,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://192.168.3.7:9008',
+        // target: 'http://192.168.3.7:9008',
+        target: 'http://127.0.0.1:7777',
         // target就是你要访问的目标地址，可以是基础地址，这样方便在这个网站的其他api口调用数据
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
